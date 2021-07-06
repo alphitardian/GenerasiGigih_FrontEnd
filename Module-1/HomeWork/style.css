@@ -1,0 +1,17 @@
+table {
+  text-align: left;
+}
+
+#overview {
+  width: 95%;
+  margin: 1em auto 1em auto;
+  background-color: antiquewhite;
+  padding: 1em;
+  border: burlywood solid 1.5px;
+  border-radius: 8px;
+}
+
+#overview img {
+  border-radius: 8px;
+  box-shadow: 0px 4px 5px rgb(179, 179, 179);
+}
