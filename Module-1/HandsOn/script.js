@@ -5,11 +5,8 @@ const student = [
   { name: "Jane", age: 20 },
 ];
 
-// get body reference
-let body = document.getElementById("app");
-
 // create table
-let table = document.createElement("table");
+let table = document.getElementById("tableData");
 let tableBody = document.createElement("tbody");
 
 student.forEach((item, index) => {
@@ -30,8 +27,6 @@ student.forEach((item, index) => {
 
 table.appendChild(tableBody);
 table.setAttribute("border", 1);
-
-body.appendChild(table);
 
 let studentTotalAge = student.reduce((total, num) => {
   return total + num.age;
