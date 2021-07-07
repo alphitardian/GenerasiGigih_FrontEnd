@@ -28,12 +28,30 @@ student.forEach((item, index) => {
 table.appendChild(tableBody);
 table.setAttribute("border", 1);
 
+// wait function
+const wait = (time) => {
+  return new Promise((resolve) => {
+    setTimeout(resolve, time);
+  });
+};
+
 let studentTotalAge = student.reduce((total, num) => {
   return total + num.age;
 }, 0);
 
 let btnClick = () => {
-  console.log(studentTotalAge / student.length);
+  console.log("calculation start");
+  console.log("second call start");
+  wait(2000).then(() => {
+    console.log("second call finish");
+    console.log("third call start");
+    wait(2000).then(() => {
+      console.log(studentTotalAge / student.length);
+      wait(1000).then(() => {
+        console.log("third call finish");
+      });
+    });
+  });
 };
 
 let button = document
