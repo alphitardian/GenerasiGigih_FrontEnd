@@ -13,7 +13,6 @@ axios
   .then((response) => {
     // Handle success response
     console.log(response);
-    console.log(response.data.album.images[0].url);
 
     // Display to the web
     let albumImg = document.getElementById("albumImg");
